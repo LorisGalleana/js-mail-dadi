@@ -1,21 +1,24 @@
 /* SEZIONE CHECK MAIL */
 
-let nome = ["a", "b", "c", "d"];
+let nome = ["mario.rossi@example.com", "giulia.verdi@example.com", "luigi.bianchi@example.com", "anna.neri@example.com"];
 
-let invitato = "b";
+let invitato = document.querySelector(".autorizzato");
+let invia = document.querySelector(".send");
 
-for (let i = 0; i < nome.length; i++) {
-  //console.log(nome[i]);
-  
-  if (invitato === nome[i]) {
-    console.log("sei sulla lista");
-    break;
-  }
-  else {
-    console.log("non sei sulla lista")
-  }
-
-};
+invia.addEventListener("click", function() {
+    for (let i = 0; i < nome.length; i++) {
+        //console.log(nome[i]);
+        
+        if (invitato.value === nome[i]) {
+          console.log("sei sulla lista");
+          break;
+        }
+        else{
+          console.log("non sei sulla lista")
+        }
+      
+      };
+});
 
 
 
