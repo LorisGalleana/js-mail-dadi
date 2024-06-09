@@ -4,6 +4,7 @@ let nome = ["mario.rossi@example.com", "giulia.verdi@example.com", "luigi.bianch
 
 let invitato = document.querySelector(".autorizzato");
 let invia = document.querySelector(".send");
+let lista = document.querySelector(".lista");
 
 invia.addEventListener("click", function() {
     for (let i = 0; i < nome.length; i++) {
@@ -11,10 +12,12 @@ invia.addEventListener("click", function() {
         
         if (invitato.value === nome[i]) {
           console.log("sei sulla lista");
+          lista.innerHTML = "Sei sulla lista"
           break;
         }
         else{
           console.log("non sei sulla lista")
+          lista.innerHTML = "Non sei sulla lista"
         }
       
       };
