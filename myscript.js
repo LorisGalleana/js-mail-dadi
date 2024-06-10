@@ -36,7 +36,7 @@ let risultato= document.querySelector(".risultato");
 let i = 0;
 roll.addEventListener("click", function() {
   
-  player1.push(Math.floor(Math.random()*6)+1);
+  /* player1.push(Math.floor(Math.random()*6)+1);
   player2.push(Math.floor(Math.random()*6)+1);
   
   console.log(player1)
@@ -54,5 +54,21 @@ roll.addEventListener("click", function() {
     risultato.innerHTML = (player1[i] + " e " + player2[i] + " Pareggio")
   }
    player1 = [];
-   player2 = [];
+   player2 = []; */
+
+  player1 =(Math.floor(Math.random()*6)+1);
+  player2 =(Math.floor(Math.random()*6)+1);
+
+  if (player1 < player2) {
+    
+    risultato.innerHTML = (player1 + " e " + player2 + " Player 2 vince")
+}
+  else if (player1 > player2) {
+    
+    risultato.innerHTML = (player1 + " e " + player2 + " Player 1 vince")
+  }
+  else {
+    risultato.innerHTML = (player1 + " e " + player2 + " Pareggio")
+  }
+
 } ) 
